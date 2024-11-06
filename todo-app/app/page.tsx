@@ -1,3 +1,5 @@
-export default function Page() {
-  return <h1>Hello, Next.js!</h1>;
+import Todos from "./_components/todos";
+
+export default function page() {
+  return <Todos />;
 }
