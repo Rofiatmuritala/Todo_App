@@ -14,8 +14,8 @@ const Todos = async () => {
       </div>
 
       <ul className="space-y-4">
-        {todos.map((todo) => (
-          <li key={todo.id} className="p-4 border rounded shadow-sm">
+        {todos.map((todo, index) => (
+          <li key={todo.id || index} className="p-4 border rounded shadow-sm">
             <div>
               <div className="flex items-center justify-between mb-2">
                 <div className="flex items-center gap-2">

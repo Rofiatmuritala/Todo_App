@@ -6,7 +6,7 @@ import { TrashIcon } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
-export function DeleteTodoButton({ id }: { id: number }) {
+export function DeleteTodoButton({ id }: { id: string }) {
   const [state, formAction] = useActionState(deleteTodo, undefined);
 
   return (

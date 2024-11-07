@@ -40,7 +40,7 @@ export async function editTodo(prevState: any, formData: FormData) {
     };
   }
 
-  const updatedTodo = await todoApi.updateTodo(Number(id), {
+  const updatedTodo = await todoApi.updateTodo(id, {
     title,
     desc,
   });
@@ -57,7 +57,7 @@ export async function editTodo(prevState: any, formData: FormData) {
 export async function deleteTodo(prevState: any, formData: FormData) {
   const id = formData.get("id") as string;
 
-  const deletedTodo = await todoApi.deleteTodo(Number(id));
+  const deletedTodo = await todoApi.deleteTodo(id);
 
   if (!deletedTodo) {
     return {
